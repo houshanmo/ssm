@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 
+	解决XML提示问题：
+		1. 联网. 
+		2. 配置本地的dtd文件. 
+ -->
+
+<!-- 全局配置文件 -->
+<configuration>
+	
+	<!-- 
+		2. settings : 包含很多重要的设置项 . 
+			 
+	 -->
+	 <settings>
+	 	<!--  last_name  ==>  lastName   映射下划线到驼峰命名  -->
+	 	<setting name="mapUnderscoreToCamelCase" value="true"/>
+	 	<!-- 开启延迟加载 -->
+	 	<setting name="lazyLoadingEnabled" value="true"/>
+	 	<!-- 加载的属性是全部 还是按需 -->
+	 	<setting name="aggressiveLazyLoading" value="false"/>
+	 </settings>
+	 
+	 <!-- 注册插件 -->
+	 <plugins>
+	 	<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	 </plugins>
+	
+
+	
+	  
+</configuration>
